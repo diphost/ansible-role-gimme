@@ -1,0 +1,8 @@
+---
+
+- name: install go with gimme
+  shell: 'eval "$(curl -sL https://raw.githubusercontent.com/meatballhat/gimme/master/gimme | GIMME_SILENT_ENV=yes GIMME_GO_VERSION={{ golang_version }} bash)"'
+
+- name: create config in profile.d
+  template: src=gimmerc.j2 dest=/etc/profile.d/gimme.sh
+

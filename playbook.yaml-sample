@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes
+
+  golang_version: 1.6.1
+  ansible_become_user: alice
+
+  roles:
+        - ansible-role-gimme
+
